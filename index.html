@@ -1,0 +1,428 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💸 Earnic - Your Easy Money Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #0056b3;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .slogan {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #007bff;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .payment-section, .section, .referral, .contact-us-section, .payment-proof-section {
+      background-color: #e9f7ff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #cceeff;
+    }
+    .cta-button, .edit-button, .complete-offers-btn, .copy-btn, .submit-btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .cta-button:hover, .complete-offers-btn:hover, .copy-btn:hover, .submit-btn:hover {
+      background-color: #0056b3;
+    }
+    .edit-button {
+      background: none;
+      border: none;
+      color: #007bff;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0 5px;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .trust-item {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-weight: bold;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    .pricing-table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    .referral input {
+      width: calc(100% - 80px);
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .referral .copy-btn {
+      width: 70px;
+      padding: 10px 5px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slider img {
+      width: 100%;
+      flex-shrink: 0;
+      display: block;
+      border-radius: 8px;
+    }
+    .pulse-animate {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,123,255,0.7); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0,123,255,0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,123,255,0); }
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background-color: #f0f8ff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #cceeff;
+      margin-bottom: 30px;
+    }
+    .testimonials-section h2 {
+      text-align: center;
+      color: #007bff;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+    .testimonial {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .testimonial.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .testimonial img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 2px solid #007bff;
+    }
+    .testimonial-text p {
+      font-size: 0.9em;
+      margin: 0;
+      font-style: italic;
+      color: #333;
+    }
+    .testimonial-text h4 {
+      font-size: 0.8em;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+<link rel="me" href="https://www.blogger.com/profile/11449324704817426846">
+<meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109">
+<meta name="google-adsense-platform-domain" content="blogspot.com">
+
+<script type="text/javascript" language="javascript">
+  // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === 'undefined') {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+</script>
+
+</head>
+<body>
+  <div class="container">
+
+<!-- Access Code Popup -->
+<div id="accessPopup" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 9999;">
+  <div style="background: white; padding: 25px 30px; border-radius: 10px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+    <h3 style="color: #ff9900; font-size: 1.2em;">⚠️ Important Notice</h3>
+    <p style="margin: 15px 0;">Please copy and save this <strong>Access Code</strong>. You’ll need it for login and withdrawals. ✅</p>
+    <input type="text" id="accessCode" value="EARNIC-8392" readonly style="padding: 10px; width: 90%; font-weight: bold; text-align: center; border: 1px solid #ccc; border-radius: 6px;">
+    <br><br>
+    <button onclick="copyAccessCode()" style="padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">📋 Copy Code</button>
+    <br><br>
+    <button onclick="closeAccessPopup()" style="padding: 6px 12px; background: transparent; border: none; color: #888; font-size: 0.9em;">Close</button>
+  </div>
+</div>
+
+    <h1>💸 Earnic</h1>
+    <p class="slogan">Your Easy Money Hub – Get Paid for Simple Tasks</p>
+
+    <div class="payment-section">
+      <h2>Enter your Payment Method:</h2>
+      <p>Select Payment Method:</p>
+      <select id="paymentMethod">
+        <option value="paypal">PayPal</option>
+        <option value="bank">Bank Transfer</option>
+        <option value="crypto">Crypto (TRC20)</option>
+      </select>
+      <div id="paymentInfoContainer"><label for="paypalEmail">PayPal Email:</label><input type="text" id="paypalEmail" placeholder="your_email@example.com"></div>
+      <button id="saveBtn" class="cta-button">Save Payment Info</button>
+      <button id="editBtn" class="edit-button" title="Edit">✏️</button>
+    </div>
+
+    <div class="section">
+      <h2>How It Works</h2>
+      <p>Welcome to <strong>Earnic</strong> – where making money is fast and simple!</p>
+      <p>Each offer takes just a few minutes. Once completed, your reward will be sent to your PayPal or bank account within <strong>30 minutes</strong>!</p>
+
+      <h2>Why Us?</h2>
+      <div class="trust-section">
+        <div class="trust-item">⚡ Fast Support</div>
+        <div class="trust-item">💰 Instant Payment in 30 minutes</div>
+        <div class="trust-item">👥 Great Referral Commission</div>
+      </div>
+
+      <table class="pricing-table">
+        <thead>
+          <tr><th>Task Type</th><th>Earnings</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Survey</td><td>$18</td></tr>
+          <tr><td>Download &amp; Play</td><td>$20 to $35</td></tr>
+          <tr><td>Referral Bonus</td><td>$6 per friend</td></tr>
+        </tbody>
+      </table>
+
+      <button class="complete-offers-btn pulse-animate" onclick="window.open('https://d2jgih9urxpa47.cloudfront.net/public/locker.php?it=4308623&key=4d377', '_blank');"> 👉💸 Tap here to start making money 💸👈 </button>
+    </div>
+
+    <div class="referral">
+      <h3>💰 Multiply Your Earnings!</h3>
+      <p>Share your referral link below. You will earn <strong>$6</strong> for each friend who signs up.</p>
+      <input id="referralLink" type="text" value="https://earnic.com/referral?code=YOURCODE123" readonly>
+      <button class="copy-btn" id="copyBtn" title="Copy referral link">📋 Copy</button>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-section">
+      <h2>🗣️ What Our Users Say</h2>
+      <div class="testimonial visible">
+        <img src="./images/45.jpg" alt="Sarah">
+        <div class="testimonial-text">
+          <p>"Earnic is real and fast! I received my money in minutes. 💸"</p>
+          <h4>– Sarah M.</h4>
+        </div>
+      </div>
+      <div class="testimonial visible">
+        <img src="./images/32.jpg" alt="Bilel">
+        <div class="testimonial-text">
+          <p>"Tasks are super easy, and the referral bonus is amazing! 👥"</p>
+          <h4>– Bilel Z.</h4>
+        </div>
+      </div>
+      <div class="testimonial visible">
+        <img src="./images/12.jpg" alt="Amina">
+        <div class="testimonial-text">
+          <p>"I invited friends and got paid instantly. Highly recommend. ⭐"</p>
+          <h4>– Amina K.</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-proof-section">
+      <h2>Payment Proof</h2>
+      <div class="slider-container">
+        <div class="slider" id="paymentSlider" style="transform: translateX(-200%);">
+          <img src="./images/i3Xlvuc.jpeg" alt="Payment Proof 1">
+          <img src="./images/PjbpGrJ.jpeg" alt="Payment Proof 2">
+          <img src="./images/24bbySY.jpeg" alt="Payment Proof 3">
+          <img src="./images/oaSKs0C.jpeg" alt="Payment Proof 4">
+          <img src="./images/ni4yiR8.jpeg" alt="Payment Proof 5">
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us-section">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const paymentMethodSelect = document.getElementById('paymentMethod');
+    const paymentInfoContainer = document.getElementById('paymentInfoContainer');
+    const saveBtn = document.getElementById('saveBtn');
+    const editBtn = document.getElementById('editBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const referralLinkInput = document.getElementById('referralLink');
+
+    function updatePaymentInfoFields() {
+      paymentInfoContainer.innerHTML = '';
+      const selectedMethod = paymentMethodSelect.value;
+
+      if (selectedMethod === 'paypal') {
+        paymentInfoContainer.innerHTML = `<label for="paypalEmail">PayPal Email:</label><input type="text" id="paypalEmail" placeholder="your_email@example.com">`;
+      } else if (selectedMethod === 'bank') {
+        paymentInfoContainer.innerHTML = `<label for="bankName">Bank Name:</label><input type="text" id="bankName" placeholder="Your Bank Name"><label for="accountNumber">Account Number:</label><input type="text" id="accountNumber" placeholder="Your Account Number"><label for="swiftCode">SWIFT/BIC Code (Optional):</label><input type="text" id="swiftCode" placeholder="SWIFT/BIC">`;
+      } else if (selectedMethod === 'crypto') {
+        paymentInfoContainer.innerHTML = `<label for="trc20Address">TRC20 Address:</label><input type="text" id="trc20Address" placeholder="Your TRC20 Wallet Address">`;
+      }
+    }
+
+    paymentMethodSelect.addEventListener('change', updatePaymentInfoFields);
+    updatePaymentInfoFields();
+
+    saveBtn.addEventListener('click', () => {
+      alert('✅ Your payment information has been saved successfully! You can now start earning money. 💸');
+    });
+
+    editBtn.addEventListener('click', () => {
+      alert('Edit functionality not yet implemented. You can modify fields directly.');
+    });
+
+    copyBtn.addEventListener('click', () => {
+      referralLinkInput.select();
+      referralLinkInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Referral link copied to clipboard!");
+    });
+
+    const slider = document.getElementById('paymentSlider');
+    const images = slider.querySelectorAll('img');
+    let currentIndex = 0;
+    function startSlider() {
+      setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+        slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+      }, 3000);
+    }
+    startSlider();
+
+    document.querySelector('.contact-us-section form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('✅ Your message has been received successfully! We will get back to you soon. 💌');
+      this.reset();
+    });
+
+    // Testimonials animation
+    const testimonials = document.querySelectorAll('.testimonial');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    testimonials.forEach(testimonial => {
+      observer.observe(testimonial);
+    });
+  
+// Access Code Popup Functions
+function copyAccessCode() {
+  const codeInput = document.getElementById("accessCode");
+  codeInput.select();
+  codeInput.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("✅ Access Code copied successfully!");
+}
+
+function closeAccessPopup() {
+  document.getElementById("accessPopup").style.display = "none";
+}
+</script>
+
+
+<!-- 'Es liegt in deiner Verantwortung, deine Besucher über die in deinem Blog verwendeten Cookies und die dort erfassten Daten zu informieren. Blogger stellt dafür eine Standardbenachrichtigung zur Verfügung, die du übernehmen, anpassen oder durch deine eigene Mitteilung ersetzen kannst. Weitere Informationen findest du unter http://www.blogger.com/go/cookiechoices.' -->
+<script src="./scripts/cookienotice.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+        (window.cookieOptions && cookieOptions.msg) || 'Diese Website verwendet Cookies von Google, um Dienste anzubieten und Zugriffe zu analysieren. Deine IP-Adresse und dein User-Agent werden zusammen mit Messwerten zur Leistung und Sicherheit für Google freigegeben. So können Nutzungsstatistiken generiert, Missbrauchsfälle erkannt und behoben und die Qualität des Dienstes gewährleistet werden.',
+        (window.cookieOptions && cookieOptions.close) || 'Ok',
+        (window.cookieOptions && cookieOptions.learn) || 'Weitere Informationen',
+        (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+  });
+</script>
+
+
+
+</body></html>
