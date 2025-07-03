@@ -1,1 +1,299 @@
-bb
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Earnic 💸</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #111;
+  color: #fff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #222;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00cfff;
+  text-shadow: 0 0 10px #00cfff;
+}
+header nav a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+section {
+  padding: 30px 20px;
+  text-align: center;
+}
+h1, h2 {
+  text-shadow: 0 0 10px #00cfff;
+}
+h1 {
+  font-size: 36px;
+}
+button {
+  padding: 10px 20px;
+  background: #00cfff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.dynamic-text {
+  font-size: 20px;
+  background: linear-gradient(90deg, #00cfff, #0ff, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 5px #00cfff; }
+  to { text-shadow: 0 0 20px #0ff; }
+}
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+}
+table, th, td {
+  border: 1px solid #555;
+}
+th, td {
+  padding: 10px;
+}
+.review-section {
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+}
+.reviewer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #222;
+  border-radius: 10px;
+  padding: 15px;
+}
+.reviewer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+.review-text {
+  font-style: italic;
+  color: #ddd;
+}
+.review-name {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #00cfff;
+}
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+footer a {
+  color: #00cfff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Earnic 💸</div>
+  <nav>
+    <a onclick="showSignup()">Sign up</a>
+    <a onclick="showSignup()">Login</a>
+  </nav>
+</header>
+
+<section>
+  <h1>Earnic 💸 — Your Easy Money Hub</h1>
+  <p class="dynamic-text">
+    💸 Earn effortlessly — complete easy tasks and get paid in just 30 minutes!
+  </p>
+</section>
+
+<section>
+  <h2>Why Us?</h2>
+  <div style="max-width: 600px; margin: 20px auto; text-align: center; font-size: 20px; font-weight: bold;">
+    <div style="display: inline-block; background: #00c957; color: #000; padding: 10px 25px; border-radius: 15px; margin: 10px; box-shadow: 0 0 8px #00c957aa;">⚡ Fast Support</div>
+    <div style="display: inline-block; background: #00c957; color: #000; padding: 10px 25px; border-radius: 15px; margin: 10px; box-shadow: 0 0 8px #00c957aa;">💰 Instant Payment</div>
+    <div style="display: inline-block; background: #00c957; color: #000; padding: 10px 25px; border-radius: 15px; margin: 10px; box-shadow: 0 0 8px #00c957aa;">👥 Great Referral Commission</div>
+  </div>
+  <p style="margin-top: 25px; font-size: 22px; font-weight: bold; background: linear-gradient(90deg, #00cfff, #0ff, #00cfff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glow 2s infinite alternate; text-align: center;">Earnic isn’t just another platform — it’s your partner in success.</p>
+</section>
+
+<section>
+  <h2>Task Type</h2>
+  <table>
+    <thead><tr><th>Task Type</th><th>Earnings</th></tr></thead>
+    <tbody>
+      <tr><td>Survey</td><td>$18</td></tr>
+      <tr><td>Download & Play</td><td>$20 to $35</td></tr>
+      <tr><td>Referral Bonus</td><td>$6 per friend</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="review-section">
+  <h2>🗣️ What Our Users Say</h2>
+
+  <div class="reviewer">
+    <img src="https://i.pravatar.cc/60?img=12" alt="Daniel" />
+    <div>
+      <div class="review-text">"Earnic is real and fast! I received my money in minutes. 💸"</div>
+      <div class="review-name">– Daniel M.</div>
+    </div>
+  </div>
+
+  <div class="reviewer">
+    <img src="https://i.pravatar.cc/60?img=25" alt="Mario" />
+    <div>
+      <div class="review-text">"Tasks are super easy, and the referral bonus is amazing! 👥"</div>
+      <div class="review-name">– Mario Z.</div>
+    </div>
+  </div>
+
+  <div class="reviewer">
+    <img src="https://i.pravatar.cc/60?img=39" alt="Elena" />
+    <div>
+      <div class="review-text">"I invited friends and got paid instantly. Highly recommend. ⭐"</div>
+      <div class="review-name">– Elena R.</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 10px 20px; text-align: center;">
+  <h2><span style="color:red;">🔴</span> Live Cashouts</h2>
+  <div id="popup-container" style="
+    max-width: 400px;
+    margin: 10px auto 0 auto;
+    position: relative;
+    min-height: 150px;
+  "></div>
+</section>
+
+<section style="padding: 20px 20px; text-align: center;">
+  <h1>Join Us and Start Now</h1>
+  <button onclick="showSignup()">Sign Up</button>
+</section>
+
+<footer>
+  &copy; 2025 Earnic. All rights reserved. |
+  <a href="#">Privacy Policy</a> |
+  <a href="#">Contact Us</a> |
+  <a href="#">Terms of Use</a>
+</footer>
+
+<div class="modal" id="signupModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+  <div style="background:#222; padding:20px; border-radius:10px; width: 90%; max-width: 350px; text-align:center;">
+    <h2>Sign Up</h2>
+    <div id="signupForm">
+      <input type="text" id="fullName" placeholder="Full Name" />
+      <input type="email" id="email" placeholder="E-mail" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="createAccount()" style="margin-top:15px;">Create Account</button>
+    </div>
+    <div id="successMsg" style="display:none; margin-top:20px;">
+      <p>Your account was created successfully!</p>
+      <button onclick="goToLogin()">Go to Login</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const popupContainer = document.getElementById("popup-container");
+
+const names = [
+  "Lucas Martin", "Emma Dubois", "Oliver Smith", "Sophie Moreau",
+  "Liam Johnson", "Charlotte Lefevre", "Noah Brown", "Chloe Laurent",
+  "William Taylor", "Amelie Petit", "Ethan Wilson", "Elise Girard"
+];
+
+const amounts = ["$39", "$25", "$60", "$15", "$80", "$45", "$30"];
+
+const icons = [
+  "https://i.imgur.com/r5Dazsj.png",
+  "https://i.imgur.com/N9kGxzM.png",
+  "https://i.imgur.com/zWQMZkj.png"
+];
+
+function showPopup() {
+    const name = names[Math.floor(Math.random() * names.length)];
+    const amount = amounts[Math.floor(Math.random() * amounts.length)];
+    const icon = icons[Math.floor(Math.random() * icons.length)];
+
+    const popup = document.createElement("div");
+    popup.style.cssText = `
+      background: #ddd;
+      color: #000;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    `;
+
+    const iconImg = document.createElement("img");
+    iconImg.src = icon;
+    iconImg.style.cssText = `
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    `;
+
+    const text = document.createElement("span");
+    text.textContent = `${name} RECEIVED ${amount}`;
+
+    popup.appendChild(iconImg);
+    popup.appendChild(text);
+    popupContainer.prepend(popup);
+
+    if (popupContainer.children.length > 3) {
+        popupContainer.lastChild.remove();
+    }
+}
+
+setInterval(showPopup, 3000);
+
+function showSignup() {
+  document.getElementById('signupModal').style.display = 'flex';
+  document.getElementById('signupForm').style.display = 'block';
+  document.getElementById('successMsg').style.display = 'none';
+}
+
+function createAccount() {
+  document.getElementById('signupForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+}
+
+function goToLogin() {
+  document.getElementById('signupModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
