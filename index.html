@@ -32,14 +32,14 @@ header nav a {
   cursor: pointer;
 }
 section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 h1, h2 {
   text-shadow: 0 0 10px #00cfff;
 }
 h1 {
-  font-size: 40px;
+  font-size: 36px;
 }
 button {
   padding: 10px 20px;
@@ -101,6 +101,18 @@ th, td {
   font-weight: bold;
   margin-top: 5px;
   color: #00cfff;
+}
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+footer a {
+  color: #00cfff;
+  text-decoration: none;
+  margin: 0 5px;
 }
 </style>
 </head>
@@ -171,20 +183,27 @@ th, td {
   </div>
 </section>
 
-<section>
+<section style="padding: 10px 20px; text-align: center;">
   <h2><span style="color:red;">🔴</span> Live Cashouts</h2>
   <div id="popup-container" style="
     max-width: 400px;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
     position: relative;
-    height: 150px;
+    min-height: 150px;
   "></div>
 </section>
 
-<section>
+<section style="padding: 20px 20px; text-align: center;">
   <h1>Join Us and Start Now</h1>
   <button onclick="showSignup()">Sign Up</button>
 </section>
+
+<footer>
+  &copy; 2025 Earnic. All rights reserved. |
+  <a href="#">Privacy Policy</a> |
+  <a href="#">Contact Us</a> |
+  <a href="#">Terms of Use</a>
+</footer>
 
 <div class="modal" id="signupModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.7); justify-content:center; align-items:center;">
   <div style="background:#222; padding:20px; border-radius:10px; width: 90%; max-width: 350px; text-align:center;">
@@ -233,10 +252,6 @@ function showPopup() {
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
-      box-shadow: 0 0 10px #00000022;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 0.5s ease;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -255,21 +270,14 @@ function showPopup() {
 
     popup.appendChild(iconImg);
     popup.appendChild(text);
-    popupContainer.appendChild(popup);
+    popupContainer.prepend(popup);
 
-    setTimeout(() => {
-        popup.style.opacity = "1";
-        popup.style.transform = "translateY(0)";
-    }, 50);
-
-    setTimeout(() => {
-        popup.style.opacity = "0";
-        popup.style.transform = "translateY(-20px)";
-        setTimeout(() => popup.remove(), 500);
-    }, 3000);
+    if (popupContainer.children.length > 3) {
+        popupContainer.lastChild.remove();
+    }
 }
 
-setInterval(showPopup, 4000);
+setInterval(showPopup, 3000);
 
 function showSignup() {
   document.getElementById('signupModal').style.display = 'flex';
